@@ -909,6 +909,165 @@
         transition: none; animation: none;
       }
     }
+
+    /* ══════════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════════ */
+    .site-footer {
+      background: var(--green);
+      color: #fff;
+      padding: 64px 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Textura sutil */
+    .site-footer::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("images/banner-amenidades-selvanova-.jpg") center/cover no-repeat;
+      opacity: 0.06;
+      pointer-events: none;
+    }
+
+    .footer-inner {
+      max-width: 1200px; width: 100%;
+      margin: 0 auto;
+      padding: 0 60px;
+      position: relative; z-index: 1;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(199,159,92,0.25);
+    }
+
+    /* Columna logo */
+    .footer-brand {}
+    .footer-logo {
+      display: block;
+      width: 160px; height: auto;
+      margin-bottom: 20px;
+      filter: brightness(0) invert(1);
+      opacity: 0.9;
+    }
+    .footer-tagline {
+      font-size: 13px; line-height: 20px;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 24px;
+      max-width: 220px;
+    }
+    .footer-social {
+      display: flex; gap: 10px;
+    }
+    .footer-social a {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      border: 1px solid rgba(199,159,92,0.45);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold);
+      font-size: 15px;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+    .footer-social a:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: #fff;
+    }
+
+    /* Columnas de links */
+    .footer-col-title {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700; font-size: 11px;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .footer-col-links {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .footer-col-links li a {
+      font-size: 14px; line-height: 20px;
+      color: rgba(255,255,255,0.72);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .footer-col-links li a:hover { color: var(--gold); }
+
+    /* Columna contacto */
+    .footer-contact-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      margin-bottom: 14px;
+    }
+    .footer-contact-item i {
+      color: var(--gold); font-size: 14px;
+      margin-top: 2px; flex-shrink: 0;
+    }
+    .footer-contact-item span {
+      font-size: 13px; line-height: 20px;
+      color: rgba(255,255,255,0.72);
+    }
+    .footer-contact-item a {
+      color: rgba(255,255,255,0.72);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .footer-contact-item a:hover { color: var(--gold); }
+
+    /* Franja inferior */
+    .footer-bottom {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 22px 0;
+      position: relative; z-index: 1;
+    }
+    .footer-bottom-inner {
+      max-width: 1200px; width: 100%;
+      margin: 0 auto; padding: 0 60px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px;
+    }
+    .footer-copy {
+      font-size: 12px; color: rgba(255,255,255,0.45);
+    }
+    .footer-legal-links {
+      display: flex; gap: 20px;
+    }
+    .footer-legal-links a {
+      font-size: 12px; color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .footer-legal-links a:hover { color: rgba(255,255,255,0.8); }
+    .footer-grupo {
+      font-size: 12px; color: rgba(255,255,255,0.35);
+    }
+    .footer-grupo a {
+      color: rgba(199,159,92,0.6);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .footer-grupo a:hover { color: var(--gold); }
+
+    /* ── Responsive footer ── */
+    @media (max-width: 1100px) {
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+    }
+    @media (max-width: 768px) {
+      .footer-inner { padding: 0 24px; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; padding-bottom: 36px; }
+      .footer-logo { width: 130px; }
+      .footer-tagline { max-width: 100%; }
+      .footer-bottom-inner {
+        padding: 0 24px;
+        flex-direction: column; align-items: flex-start; gap: 8px;
+      }
+      .footer-legal-links { gap: 14px; flex-wrap: wrap; }
+    }
   </style>
 </head>
 <body>
@@ -1225,6 +1384,81 @@
   <button class="btn-cta-brochure" onclick="toggleBrochureModal(true)">Quiero el brochure</button>
   <button class="btn-schedule" onclick="toggleModal(true)">Agenda una asesoría</button>
 </section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+
+      <!-- Columna 1: Marca -->
+      <div class="footer-brand">
+        <img
+          src="images/Lomabonita_tampico.png"
+          alt="Loma Bonita"
+          class="footer-logo"
+          onerror="this.style.opacity='0'">
+        <p class="footer-tagline">Un lugar donde cada detalle fue pensado para que tu familia viva mejor, en un entorno seguro y de alto valor.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/52899224432" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.youtube.com/channel/UC9dB8d8vtl6cUay-5QSYxdg" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Columna 2: Navegación -->
+      <div>
+        <p class="footer-col-title">Navegación</p>
+        <ul class="footer-col-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#amenidades">Amenidades</a></li>
+          <li><a href="#prototipos">Modelos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Desarrollo -->
+      <div>
+        <p class="footer-col-title">Desarrollo</p>
+        <ul class="footer-col-links">
+          <li><a href="#prototipos">Modelo Mallorca</a></li>
+          <li><a href="#prototipos">Modelo Colibri</a></li>
+          <li><a href="#" onclick="toggleBrochureModal(true);return false;">Descargar Brochure</a></li>
+          <li><a href="#" onclick="toggleModal(true);return false;">Agendar Asesoría</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 4: Contacto -->
+      <div>
+        <p class="footer-col-title">Contacto</p>
+        <div class="footer-contact-item">
+          <i class="fab fa-whatsapp"></i>
+          <span><a href="https://wa.me/52899224432" target="_blank">+52 (899) 224-4322</a></span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-clock"></i>
+          <span>Lunes a Viernes 9:00 – 18:00 hrs</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-clock"></i>
+          <span>Sábado 9:00 – 14:00 hrs</span>
+        </div>
+      </div>
+
+    </div><!-- /.footer-top -->
+  </div><!-- /.footer-inner -->
+
+  <!-- Franja inferior -->
+  <div class="footer-bottom" style="border-top:1px solid rgba(199,159,92,0.15);">
+    <div class="footer-bottom-inner">
+      <p class="footer-copy">© 2024 Loma Bonita. Todos los derechos reservados.</p>
+      <nav class="footer-legal-links">
+        <a href="https://grupovelas.com.mx/aviso-de-privacidad" target="_blank">Aviso de Privacidad</a>
+      </nav>
+      <p class="footer-grupo">Un desarrollo de <a href="https://grupovelas.com.mx" target="_blank">Grupo Velas</a></p>
+    </div>
+  </div>
+</footer>
 
 <!-- ══════════════════════════════════════════
      MODAL — 3-STEP ASESORÍA
