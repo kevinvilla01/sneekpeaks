@@ -1802,7 +1802,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function enviarAMake(datos) {
   const h = (datos.cuandoLlamar==='inmediato'||datos.tipo==='Brochure') ? 'Inmediatamente' : (datos.fechaHora||'No especificado');
   fetch(MAKE_WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
-    Producto:'Selvanova Departamentos', Nombre:datos.nombre, 'E-mail':datos.email,
+    Producto:'Loma Bonita Reynosa', Nombre:datos.nombre, 'E-mail':datos.email,
     Teléfono:datos.telefono||'No proporcionado', 'Medio de contacto':datos.medioContacto||'Brochure (Email)',
     'Horario para llamar':h
   })}).catch(e=>console.error('Make:',e));
