@@ -1084,7 +1084,7 @@
         <div class="ph" style="display:none;width:152px;height:56px;border-radius:4px;font-size:10px;">LOGO</div>
       </div>
       <nav class="nav-links">
-        <a href="#">Home</a>
+        <a href="#">Inicio</a>
         <a href="#amenidades">Amenidades</a>
         <a href="#prototipos">Modelos</a>
         <a href="#contacto">Contacto</a>
@@ -1095,7 +1095,7 @@
     </div>
   </div>
   <div id="mobile-menu">
-    <a href="#">Home</a>
+    <a href="#">Inicio</a>
     <a href="#amenidades">Amenidades</a>
     <a href="#prototipos">Modelos</a>
     <a href="#contacto">Contacto</a>
@@ -1450,7 +1450,7 @@
   <!-- Franja inferior -->
   <div class="footer-bottom" style="border-top:1px solid rgba(199,159,92,0.15);">
     <div class="footer-bottom-inner">
-      <p class="footer-copy">© 2024 Loma Bonita. Todos los derechos reservados.</p>
+      <p class="footer-copy">© 2026 Loma Bonita. Todos los derechos reservados.</p>
       <nav class="footer-legal-links">
         <a href="https://grupovelas.com.mx/aviso-de-privacidad" target="_blank">Aviso de Privacidad</a>
       </nav>
@@ -1611,7 +1611,7 @@
 <script>
 /* ── CONFIG ─────────────────────────────── */
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxEUtmLku583ifBtzHqjZ_QnBs0ZYmswItS5uJYd9Qdxpzjb3-VDETHRPtuSYL7hNAG/exec';
-const MAKE_WEBHOOK_URL = '';
+const MAKE_WEBHOOK_URL = 'https://hook.us2.make.com/r7h4db16lgl6a8ybu48586795kj7bint';
 
 toastr.options = { closeButton: true, positionClass: 'toast-top-center' };
 
@@ -1737,7 +1737,7 @@ function getFormData() {
     medioContacto: m.value,
     cuandoLlamar:  c.value,
     fechaHora,
-    fuente:    'Landing Loma Bonita',
+    fuente:    'Landing Loma Bonita Reynosa',
     timestamp: new Date().toISOString()
   };
 }
@@ -1835,7 +1835,7 @@ document.getElementById('brochureForm').addEventListener('submit', function(e) {
   const datos = {
     nombre: document.querySelector('#brochureForm input[name="nombre"]').value,
     email:  document.querySelector('#brochureForm input[name="email"]').value,
-    tipo: 'Brochure', fuente: 'Descarga Brochure Loma Bonita'
+    tipo: 'Brochure', fuente: 'Descarga Brochure Loma Bonita Reynosa'
   };
   enviarAMake(datos);
   fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',body:JSON.stringify(datos)});
