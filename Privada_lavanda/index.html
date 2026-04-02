@@ -1827,7 +1827,7 @@ document.getElementById('brochureForm').addEventListener('submit', function(e) {
   const datos = {
     nombre: document.querySelector('#brochureForm input[name="nombre"]').value,
     email:  document.querySelector('#brochureForm input[name="email"]').value,
-    tipo: 'Brochure', fuente: 'Descarga Brochure Privada Lavanda'
+    tipo: 'Brochure', fuente: 'Descarga Brochure Privada Lavanda II'
   };
   enviarAMake(datos);
   fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',body:JSON.stringify(datos)});
