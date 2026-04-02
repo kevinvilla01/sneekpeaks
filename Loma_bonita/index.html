@@ -1608,10 +1608,11 @@
 ══════════════════════════════════════════ -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="config_lomabonita.js"></script>
 <script>
 /* ── CONFIG ─────────────────────────────── */
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxEUtmLku583ifBtzHqjZ_QnBs0ZYmswItS5uJYd9Qdxpzjb3-VDETHRPtuSYL7hNAG/exec';
-const MAKE_WEBHOOK_URL = 'https://hook.us2.make.com/r7h4db16lgl6a8ybu48586795kj7bint';
+const SCRIPT_URL = CONFIG.apiUrl;
+const MAKE_WEBHOOK_URL = CONFIG.webhookUrl;
 
 toastr.options = { closeButton: true, positionClass: 'toast-top-center' };
 

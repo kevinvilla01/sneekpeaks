@@ -1106,9 +1106,9 @@
      HERO
 ══════════════════════════════════════════ -->
 <section class="hero">
-  <img class="hero-img" src="images/banner-privada-lavanda.jpeg" alt="Privada Lavanda II"
+  <img class="hero-img" src="images/banner-privada-lavanda.png" alt="Privada Lavanda II"
        onerror="this.style.opacity='0'">
-  <img class="hero-img-mobile" src="images/banner-privada-lavanda.jpeg" alt="Privada Lavanda II"
+  <img class="hero-img-mobile" src="images/banner-privada-lavanda.png" alt="Privada Lavanda II"
        onerror="this.style.opacity='0'">
   <div class="hero-gradient"></div>
   <div class="hero-content">
@@ -1599,10 +1599,11 @@
 ══════════════════════════════════════════ -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="config_lavanda.js"></script>
 <script>
 /* ── CONFIG ─────────────────────────────── */
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxEUtmLku583ifBtzHqjZ_QnBs0ZYmswItS5uJYd9Qdxpzjb3-VDETHRPtuSYL7hNAG/exec';
-const MAKE_WEBHOOK_URL = '';
+const SCRIPT_URL = CONFIG.apiUrl;
+const MAKE_WEBHOOK_URL = CONFIG.webhookUrl;
 
 toastr.options = { closeButton: true, positionClass: 'toast-top-center' };
 
